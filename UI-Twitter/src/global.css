@@ -26,3 +26,14 @@ button {
 a {
     color: inherit;
 }
+
+/* PAGE: TIMELINE */
+
+.layout {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.sidebar {}
+
+.content {}
