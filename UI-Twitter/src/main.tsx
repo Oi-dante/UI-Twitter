@@ -80,6 +80,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             <button type='submit'>Tweet</button>
           </form>
 
+          <div className="separator"></div>
+
         </main>
       </div>
 
