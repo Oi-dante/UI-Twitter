@@ -8,12 +8,10 @@ import { Tweet } from './components/Tweets'
 import { Sidebar } from './components/Sidebar'
 import { Header } from './components/Header'
 import { Separator } from './components/Separator'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './components/routes'
 
-const tweets = [
-  'meu primeiro tweet',
-  'teste',
-  'Deu certo',
-]
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -22,30 +20,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       
 
       <div className="content">
-        <main className='timeList'>
-          <Header title="Home" />
-         
-
-          <form className='new-tweet-form'>
-            <label htmlFor="tweet">
-              <img src="https://github.com/oi-dante.png" alt="Gustavo Barboza" />
-              <textarea id="tweet" placeholder="What's happening?"/>
-            </label>
-
-            <button type='submit'>Tweet</button>
-          </form>
-
-          <Separator/> 
-
-          {tweets.map(tweet => {
-            return <Tweet key={tweet} content={tweets} />
-          })}
-
-        </main>
+        <RouterProvider router={router}/>
       </div>
-
-
-
 
     </div>
     
