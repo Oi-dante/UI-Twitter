@@ -18,13 +18,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <div className="layout">
       <Sidebar />
       
-
       <div className="content">
         <RouterProvider router={router}/>
       </div>
-
     </div>
-    
-
   </React.StrictMode>,
 )
