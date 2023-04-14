@@ -56,3 +56,14 @@
 .main-navigation a.active{
     color: var(--twitter-blue);
 }
+
+@media (max-width: 780px) {
+    .side-bar {
+        padding: 1.5rem 0.75rem;
+        align-items: center;
+    }
+
+    .main-navigation a span{
+        display: none;
+    }
+}
