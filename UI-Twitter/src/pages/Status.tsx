@@ -4,6 +4,7 @@ import { Separator } from "../components/Separator"
 import { Tweet } from "../components/Tweets"
 
 import './Status.css'
+import { PaperPlaneRight } from "phosphor-react"
 
 
 
@@ -55,7 +56,10 @@ export function Status() {
            />
         </label>
 
-        <button type='submit'>Answer</button>
+        <button type='submit'>
+          <PaperPlaneRight/>
+          <span>Answer</span> 
+        </button>
       </form>
 
 

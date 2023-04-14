@@ -29,6 +29,12 @@
     border: 0;
 }
 
+.side-bar .new-tweet svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: none;
+}
+
 .side-bar .new-tweet:hover {
     filter: brightness(0.9);
 }
@@ -65,5 +71,13 @@
 
     .main-navigation a span{
         display: none;
+    }
+
+    .side-bar .new-tweet span {
+        display: none;
+    }
+
+    .side-bar .new-tweet svg {
+        display: block;
     }
 }
