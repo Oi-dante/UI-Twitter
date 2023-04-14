@@ -1,38 +1,57 @@
+import { FormEvent, useState } from "react"
 import { Header } from "../components/Header"
 import { Separator } from "../components/Separator"
 import { Tweet } from "../components/Tweets"
 
 import './Status.css'
 
-const answers = [
+
+
+export function Status() {
+  const [newAnswer, setNewAnswer] = useState('')
+  const [answers, setAnswers] = useState([
     'Concordo...',
     'Olha, faz sentido',
     'Parabens!',
-]
+  ]
+  )
 
-export function Status() {
-    return (
-        <main className='status'>
-        <Header title="Tweet" />
+  function createNewAnswer(event: FormEvent){
+    event.preventDefault()
 
-        <Tweet content="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum maxime nisi sit similique. Soluta excepturi nisi ducimus quod. Incidunt eaque repellat dignissimos aperiam numquam praesentium inventore excepturi quibusdam quo!"/>
-      
-        <Separator/>  
+    setAnswers([newAnswer, ...answers])
+    setNewAnswer('')
+  }
+  
+  return (
+      <main className='status'>
+      <Header title="Tweet" />
 
-        <form className='answer-tweet-form'>
-          <label htmlFor="tweet">
-            <img src="https://github.com/oi-dante.png" alt="Gustavo Barboza" />
-            <textarea id="tweet" placeholder="Tweet your answer"/>
-          </label>
+      <Tweet content="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum maxime nisi sit similique. Soluta excepturi nisi ducimus quod. Incidunt eaque repellat dignissimos aperiam numquam praesentium inventore excepturi quibusdam quo!"/>
+    
+      <Separator/>  
 
-          <button type='submit'>Answer</button>
-        </form>
+      <form onSubmit={createNewAnswer} className='answer-tweet-form'>
+        <label htmlFor="tweet">
+          <img src="https://github.com/oi-dante.png" alt="Gustavo Barboza" />
+          <textarea 
+            id="tweet"
+            placeholder="Tweet your answer"
+            value={newAnswer}
+            onChange={(event) => {
+              setNewAnswer(event.target.value)
+            }} 
+           />
+        </label>
+
+        <button type='submit'>Answer</button>
+      </form>
 
 
-        {answers.map(answer => {
-          return <Tweet key={answer} content={answer} />
-        })}
+      {answers.map(answer => {
+        return <Tweet key={answer} content={answer} />
+      })}
 
-      </main>
-    )
+    </main>
+  )
 }
