@@ -27,6 +27,7 @@
     font-weight: 500;
     margin-top: 0.75rem;
     resize: none;
+    background-color: var(--clr-background);
 }
 
 .new-tweet-form label textarea:focus{
@@ -34,12 +35,12 @@
 }
 
 .new-tweet-form label textarea::placeholder {
-    color: #5b7083;
+    color: #2F2F2F;
 }
 
 .new-tweet-form button[type=submit] {
     margin-left: auto;  
-    background: var(--twitter-blue);
+    background: var(--twitter-scarlet);
     border-radius: 999px;
     padding: 0.75rem;
     color: white;

@@ -6,13 +6,18 @@
 
 :root{
     --twitter-blue: #1da1f2;
+    --twitter-scarlet: #9D2F43;
+    --clr-word: #FFFFFF;
+    --clr-background: #121214;
+    --clr-seprator: #202020;
 
 }
 
 
 body {
-    color: #0f1419;
+    color: var(--clr-word);
     -webkit-font-smoothigng:antialiased;
+    background-color: var(--clr-background);
 }
 
 body, input, textarea, button {

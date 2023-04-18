@@ -1,6 +1,6 @@
 .separator {
-    background: #f7f9fa;
-    border-top: 1px solid #ebeef0;
-    border-bottom: 1px solid #ebeef0;
+    background: var(--clr-seprator);
+    border-top: 1px solid var(--clr-seprator);
+    border-bottom: 1px solid var(--clr-seprator);
     height: 0.75rem;
 }

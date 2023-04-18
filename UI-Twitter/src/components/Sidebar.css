@@ -14,9 +14,10 @@
     height: 2rem;
 }
 
+
 .side-bar .new-tweet {
-    background:var(--twitter-blue );
-    color: white;
+    background:var(--twitter-scarlet);
+    color: var(--clr-word);
     border-radius: 999px;
     padding: 1rem;
 
@@ -60,7 +61,7 @@
 }
 
 .main-navigation a.active{
-    color: var(--twitter-blue);
+    color: var(--twitter-scarlet);
 }
 
 @media (max-width: 780px) {
